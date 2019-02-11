@@ -193,6 +193,7 @@ func main() {
 			if cli.Check {
 				check(filename, lex(ctx, filename, string(contents)))
 			} else {
+				format(ctx, os.Stdout, style, lex(ctx, filename, string(contents)))
 				format(ctx, w, style, lex(ctx, filename, string(contents)))
 			}
 		}
